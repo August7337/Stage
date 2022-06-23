@@ -21,6 +21,11 @@ h1 {
     width: 520px;
 }
 
+h3{
+    color: white;
+    font-size: 16;
+}
+
 p {
     font-size: 20px;
     color: white;
@@ -74,4 +79,8 @@ p {
 
 .img-miniature{
     display: flex;
+}
+
+.texte{
+    width: 200px;
 }
