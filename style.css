@@ -21,15 +21,30 @@ h1 {
     width: 520px;
 }
 
+h2{
+    color: white;
+    font-size: 16;
+    font-family: 'Montserrat', sans-serif;
+}
+
 h3{
     color: white;
     font-size: 16;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
     font-size: 20px;
     color: white;
     margin: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p > a{
+    font-size: 48px;
+    color: #ff2323;
+    margin: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -64,11 +79,11 @@ p {
 }
 
 .Layer1{
-    position:absolute; left:100px; top: 340px; width: 100%; z-index:2
+    position:absolute; left:100px; top: 340px; width: 100%; z-index:-1
 }
 
 .Layer2{
-    position:absolute; left:50px; top:350px; width:100%; z-index:1
+    position:absolute; left:50px; top:350px; width:100%; z-index:-2
 }
 
 .miniatures{
@@ -83,4 +98,22 @@ p {
 
 .texte{
     width: 200px;
+    width: 405px;
+}
+
+.partie-de-droite{
+    display: block;
+    background-color: #FF4040;
+    height: 938px;
+    width: 537px;
+}
+
+.partie-de-droite > div{
+    margin: 35px;
+}
+
+.haut-de-page{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
 }
