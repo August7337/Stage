@@ -23,7 +23,7 @@ h1 {
 
 h2{
     color: white;
-    font-size: 16;
+    font-size: 72;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -52,6 +52,7 @@ p {
 }
 
 .header {
+    position: relative;
     display: flex;
     background-color:#2F2F2F;
     margin: 0px;
@@ -60,7 +61,7 @@ p {
     
     box-shadow: 0px -20px 60px;
     justify-content: space-between;
-    z-index: 15;
+    z-index: 2;
     
 }
 
@@ -84,35 +85,55 @@ p {
     border-width: 1px;
 }
 
-.Layer1{
-    position: relative;
+.image{
     background-image: linear-gradient(145deg, black, transparent);
     border-radius: 50%;
     flex: 1 1 auto;
+    position: relative;
+    max-width: 700px;
 }
 
-.Layer1::before {
+.image::before {
     content: '';
     display: block;
     padding-top: 100%;
 }
 
-.Layer1 img {
+.image img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    max-width: 700px;
+    transform: scale(0.9);
 }
 
+.motif-carre1{
+    position: absolute;
+    top: 880px;
+    left: 380px;
+    z-index: -5;
+}
 
+.motif-carre2{
+    position: absolute;
+    top: 812px;
+    left: 1124px;
+    z-index: 5;
+    width: 283px;
+}
 
 .miniatures{
+    margin-left: -50px;
+}
+
+.miniature {
     border: solid 15px; width: 100px; height: 100px;
-    margin: 15px;
+    margin: 50px;
     display: block;
-    margin-left: auto;
+    margin-left: auto
 }
 
 .img-miniature{
@@ -126,14 +147,16 @@ p {
     width: 200px;
     width: 405px;
 }
+.partie-de-gauche{
+    flex: 1 1 auto;
+}
 
 .partie-de-droite{
     display: block;
     background-color: #FF4040;
-    height: 938px;
     width: 537px;
     flex: 0 1 0;
-    box-shadow: -5px 5px 40px;
+    box-shadow: -5px 5px 60px;
     z-index: 1;
 }
 
@@ -144,29 +167,41 @@ p {
 .haut-de-page{
     display: flex;
     justify-content: space-between;
-    margin: 15px 0;
+    column-gap: 50px;
 }
 
+
+.cercles {
+    display: flex;
+    column-gap: 50px;
+}
+.cercles > * {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
 .cercle-noir{
     background:#272727;
-    width:43px;
 }
 
 .cercle-blanc{
     background:#F3F3F3;
-    width:43px;
 }
 
 .cercle-rouge{
     background:#C90000;
-    width:43px;
+    border: 1px dashed white;
 }
 
 video{
     margin-right: auto;
     margin-left: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
     object-fit: contain;
-    border-radius: 5%;
+    border-radius: 46px;
+    box-shadow: -5px 5px 30px;
+    display: block;
 }
 
 .Layer1::before{
@@ -184,10 +219,128 @@ video{
     width: 298px;
     height: 73px;
     color: white;
-    fill: white;
-    border-radius: 25%;
+    background-color: white;
+    border-radius: 36.5px;
+    margin: auto;
+    box-shadow: black 4px 4px 20px;
+    
+}
+
+.bouton p{
+    color: #363636;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: auto;
+    padding-top: auto;
 }
 
 .specification1{
     font-size: 35;
+}
+
+.etoiles{
+    display: flex;
+}
+
+.etoile{
+    padding: 5px;
+}
+
+.text-etoiles{
+    display: flex;
+}
+
+.text-etoiles >p, .cent-pour-cent >p{
+    font-size: 200px ;
+}
+
+.etoiles-reviews, .customers{
+    margin: 45px;
+    margin-left: 0px;
+}
+
+.customers{
+    margin-top: auto;
+    margin-left: 20px;
+    
+}
+
+
+.rating{
+    background-color: #FF4040;
+    border-radius: 19px;
+    padding: 40px;
+    margin: 40px;
+    width: 537px;
+    box-shadow: -5px 5px 60px;
+}
+
+.petite-etoile{
+    width: 37px;
+}
+
+.petites-etoiles-date{
+    display: flex;
+}
+
+.ligne-rating{
+    background-color: solid;
+    border-color: rgba(255, 255, 255, 40);
+    width: 300px;
+    border-radius: 5px;
+    
+}
+
+.etoiles-et-cent-pour-cent{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    padding: 20px;
+}
+
+.signe-up-panel{
+    background-color: #FF4040;
+    border-radius: 19px;
+    padding: 40px;
+    margin: 40px;
+    width: 537px;
+    box-shadow: -5px 5px 60px;
+}
+
+.carre-noir{
+    background-color: #272727;
+    margin-left: auto;
+    width: 52px;
+    border-left: 1px solid;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.your-mail{
+    display: flex;
+    border: 1px solid ;
+    width: 333px;
+    height: 52px;
+}
+
+.img-arrow{
+}
+
+.deux-panel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signe-up-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    padding: 40px;
+    max-width: 300;
+}
+
+.off-your-mail{
+
 }
